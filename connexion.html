@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Team Cook - Connexion</title>
+    </head>
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="logo.png" alt="Logo de Team Cook" />
+                        <h1>Team Cook</h1>    
+                    </div>
+                    <h2>Faites équipe avec votre cuisine</h2>
+                </div>
+                <div id="compte">
+                    <h1><a href="connexion.html">Se connecter</a>&ensp;|&ensp;<a href="inscription.html">S'inscrire</a></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="#">Recettes</a>
+                            <ul>
+                                <li><a href="pizza.html">Pizza</a></li>
+                                <li><a href="#">Pâte</a></li>
+                                <li><a href="#">Café</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Mon compte</a>
+                            <ul>
+                                <li><a href="#">Mes informations</a></li>
+                                <li><a href="#">Mes recettes préférées</a></li>
+                                <li><a href="#">Déconnexion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        <section>
+                <article>
+                    <h1>Bienvenue sur Team Cook !</h1>
+                        <form method="post" action="traitement.php">
+                            <p>
+                                <label for="pseudo">Votre pseudo :</label>
+                                <input type="text" name="pseudo" id="pseudo" required />
+                                <br />
+                                <br />
+                                <label for="pass">Votre mot de passe :</label>
+                                <input type="password" name="pass" id="pass" required />
+                                <br />
+                                <br />
+                                <input type="submit" value="Connexion" />
+                            </p>
+                        </form>                    
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

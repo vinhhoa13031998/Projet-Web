@@ -1,0 +1,314 @@
+/* Eléments principaux de la page */
+
+@font-face
+{
+    font-family: 'MaPolice';
+    src: url('Rubik-Black.ttf');
+}
+
+body
+{
+    color: #000000; /* texte en noir par défaut */
+    background-color: #a7ccd9; /* fond de la page en bleu clair */
+    font-family : verdana;
+}
+
+#bloc_page
+{
+    width: 95%; /* pourcentage d'occupation de la largeur de l'écran */
+    margin: auto; /* par défaut, au centre */
+}
+
+section h1, footer h1, nav a
+{
+    text-transform: uppercase; /* en majuscules */
+}
+
+/* Header */
+
+header
+{
+    font-family: MaPolice; /* police pour le header */
+    background-color: #08688a; /* couleur de fond */
+    border-radius: 10px; /* coins arrondis */
+    display: flex; /* place les blocs sur une ligne par défaut */
+    justify-content: space-around; /* disposition des éléments */
+    align-items: flex-end; /* les éléments flexibles sont regroupés à la fin */
+    margin-bottom: 10px; /* laisser espace en-dessous du header */
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column; /* place les éléments en colonne */
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row; /* place les éléments sur une ligne */
+    align-items: baseline; /* aligne les éléments en bas */
+}
+
+#logo img
+{
+    height: 80px; /* redimensionnement du logo */
+}
+
+#titre_principal h1
+{
+    font-size: 2.5em; /* taille du texte */
+    font-weight: bold; /* texte en gras */
+    margin: 0px 0px 0px 15px; /* décalage de Team Cook vers la droite par rapport au logo */
+}
+
+#titre_principal h2
+{
+    font-size: 1.1em; /* taille du texte */
+    margin-top: 2px; /* marge entre le slogan et le logo */
+    font-weight: normal; /* texte en mode normal */
+}
+
+#compte h1
+{
+    position: absolute;
+    font-size: 0.8em; /* taille du texte */
+    color: white; /* texte en blanc */
+    top: 20px; /* espace au-dessus */
+    right: 58px; /* espace à droite */
+}
+#compte h1 a
+{
+    color: white; /* texte en blanc */
+}
+
+#compte h1 a:hover
+{
+    color: #0e0363; /* texte en bleu foncé */
+}
+
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none; /* aucune puce */
+    display: flex; /* place les blocs sur une ligne par défaut */
+}
+
+nav li
+{
+    position: relative;
+    margin-right: 5px; /* marge à droite entre les éléments */
+}
+
+nav a
+{
+    display: block; /* pour pourvoir choisir la largeur */
+    width: 180px; /* largeur des menus */
+    font-size: 1.5em; /* taille du texte */
+    color: #6bcbed; /* en bleu clair */
+    text-decoration: none; /* pas de style particulier */
+    border: 3px white solid; /* bordures */
+    border-top-left-radius: 10px; /* coins arrondis en haut à gauche */
+    border-top-right-radius: 10px; /* coins arrondis en haut à droite */
+    background-color: #0e0363; /* remplissage bleu foncé */
+    padding: 10px 0px 10px; /* marges intérieures */
+    text-align: center; /* centrer les noms des menus */
+}
+
+nav a:hover
+{
+	color: #ab0314; /* en rouge */
+	border: 3px #0e0363 solid; /* bordures */
+	background-color: #f5e90a; /* remplissage jaune */
+}
+
+nav ul li ul
+{
+    display: none; /* ne pas afficher les sous-menus par défaut */
+    position: absolute;
+    top: 55px;
+    left: -40px; /* pour alligner les sous-menus avec les menus */
+}
+
+nav ul li:hover ul 
+{
+    display: list-item; /* afficher les sous-menus */
+}
+
+nav ul li ul li a
+{
+    font-size: 0.7em; /* taille du texte */
+    color: #f5e90a; /* en jaune */
+    border: 3px white solid; /* bordures */
+    border-top-left-radius: 0px; /* coins pas arrondis en haut à gauche */
+    border-top-right-radius: 0px; /* coins pas arrondis en haut à droite */
+    background-color: #ab0314; /* remplissage rouge */
+}
+
+nav ul li ul li a:hover
+{
+    color: #0e0363; /* en bleu foncé */
+    border: 3px black solid; /* bordures */
+    background-color: #6bcbed; /* remplissage bleu clair */
+}
+
+/* Bannière */
+
+#banniere_image
+{
+    width: 770px; /* largeur de l'image */
+    height : 300px; /* hauteur de l'image */
+    border-radius: 10px; /* coins arrondis */
+    background: url(banniere.jpg) no-repeat; /* image de fond */
+    margin-left: auto;
+    margin-right: auto; /* au centre */
+    margin-bottom: 50px; /* espace en-dessous */
+}
+
+#banniere_description
+{
+    position: relative; /* positionnement manuel par rapport à l'image */
+    top: 257px;
+    border-radius: 0px 0px 10px 10px; /* coins arrondis */
+    width: 754px; /* largeur */
+    height: 30px; /* hauteur */
+    padding-top: 13px; /* espace au-dessus du texte */
+    padding-left: 15px; /* espace à gauche du texte */
+    background-color: rgba(24,24,24,0.8); /* couleur de fond */
+    color: white; /* couleur du texte */
+    font-size: 0.8em; /* taille du texte */
+}
+
+/* Corps */
+
+section
+{
+    display: flex; /* place les blocs sur une ligne par défaut */
+    margin-bottom: 50px; /* espace en-dessous */
+    font-size: 1.2em; /* taille du texte */
+}
+
+article, aside
+{
+    text-align: justify; /* texte justifié */
+}
+
+article
+{
+    margin-right: 30px; /* espace entre les deux colonnes */
+    width: 70%; /* largeur du texte */
+}
+
+article p, aside p
+{
+    font-size: 0.9em; /* taille du texte */
+}
+
+aside
+{
+    background-color: #706b64; /* couleur de fond */
+    border-radius: 10px; /* coins arrondis */
+    padding: 10px; /* marges intérieures */
+    color: white; /* couleur du texte */
+    width: 30%; /* largeur du bandeau à droite */
+    margin-right: 0px; /* mettre le cadre à gauche */
+}
+
+aside h1
+{
+    text-align: center; /* titre au centre */
+}
+
+#photo_contact
+{
+    text-align: center; /* image au centre */
+}
+
+#photo_contact img
+{
+    width: 150px; /* largeur de l'image */
+    height : 150px; /* hauteur de l'image */
+}
+
+table
+{
+    text-align: center; /* centrer le texte */
+}
+
+td, th
+{
+    padding: 30px; /* agrandir la taille des cellules */
+}
+
+.tableau_ingredients
+{
+    margin-left: auto;
+    margin-right: auto; /* centrer le tableau */
+}
+
+#photo_pizza
+{
+    text-align: center; /* image au centre */
+}
+
+#photo_pizza img
+{
+    width: 150px; /* largeur de l'image */
+    height : 150px; /* hauteur de l'image */
+}
+
+/* Footer */
+
+footer
+{
+    display: flex; /* place les blocs sur une ligne par défaut */
+    background-color: #f5e90a; /* couleur de fond */
+    border-radius: 10px; /* coins arrondis */
+    padding-top: 5px; /* espace au-dessus du texte */
+    padding-bottom: 5px; /* espace en-dessous du texte */
+    justify-content: space-around; /* disposition des éléments */
+}
+
+footer p, footer ul
+{
+    font-size: 0.9em; /* taille du texte */
+    text-align: center; /* texte au centre */
+}
+
+footer h1
+{
+    font-size: 0.8em; /* taille du texte */
+    text-decoration: underline; /* titres soulignés */
+}
+
+#recette_semaine, #derniere_recette, #recettes_moment
+{
+    border: solid; /* bordures pleines */
+    border-radius: 10px; /* coins arrondis */
+    padding: 5px 20px 0px; /* marges intérieures */
+}
+
+#recette_semaine img, #derniere_recette img
+{
+    width: 150px; /* largeur de l'image */
+    height : 150px; /* hauteur de l'image */
+    border-radius: 10px; /* coins arrondis */
+}
+
+#recettes_moment a
+{
+    display: flex;
+    text-decoration: none; /* pas souligné */
+}
+
+#recettes_moment a:hover
+{
+    color: #6bcbed; /* texte en bleu clair */
+}
+
+#recette_semaine:hover, #derniere_recette:hover, #recettes_moment:hover
+{
+    background-color: #0e0363; /* bleu foncé */
+    color: white; /* texte en blanc */
+}
